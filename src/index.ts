@@ -1,21 +1,21 @@
-// クラスの基本的な例
-class Person {
+class Department {
   // プロパティ
-  private name: string;
-  private age: number;
+  name: string;
 
   // コンストラクタ
-  constructor(name: string, age: number) {
-    this.name = name;
-    this.age = age;
+  constructor(n: string) {
+    this.name = n;
   }
 
   // メソッド
-  public introduce(): void {
-    console.log(`私の名前は${this.name}です。${this.age}歳です。`);
+  describe() {
+    console.log('Department: ' + this.name);
   }
+
 }
 
-// クラスのインスタンス化
-const person = new Person("田中", 25);
-person.introduce(); 
+// インスタンス化
+const accounting = new Department('Accounting');
+
+// メソッドを呼び出す
+accounting.describe();
